@@ -1,0 +1,32 @@
+15:54:28.596 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+15:54:29.282 request:
+1 > POST https://reqres.in/api/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 36
+1 > Content-Type: text/plain; charset=UTF-8
+1 > Host: reqres.in
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+{"name": "morpheus","job": "leader"}
+
+15:54:32.105 response time in milliseconds: 2822.63
+1 < 201
+1 < Access-Control-Allow-Origin: *
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 5b32c625bae9c33b-SIN
+1 < Connection: keep-alive
+1 < Content-Length: 51
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Jul 2020 10:24:29 GMT
+1 < Etag: W/"33-sazM38tmln/InHRJaWAobSpNy40"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=d4bb09d8937e2a571356285b49eb046261594808669; expires=Fri, 14-Aug-20 10:24:29 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 < Via: 1.1 vegur
+1 < X-Powered-By: Express
+1 < cf-request-id: 03f39a2b960000c33b65ab1200000001
+{"id":"947","createdAt":"2020-07-15T10:24:29.367Z"}
+
+15:54:32.114 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+15:54:32.136 [print] Hello  World
+15:54:32.136 [print] Hi  everybody

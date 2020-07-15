@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-1"},{"id":2,"content":"ForkJoinPool-1-worker-2"},{"id":3,"content":"ForkJoinPool-1-worker-5"},{"id":4,"content":"ForkJoinPool-1-worker-4"},{"id":5,"content":"ForkJoinPool-1-worker-3"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"dataDriven[1.1:15]","start":732,"end":4604,"title":"dataDriven[1.1:15] 05:30:00.732-05:30:04.604 Create User Details"},{"id":2,"group":2,"content":"demoTest[1:8]","start":732,"end":4871,"title":"demoTest[1:8] 05:30:00.732-05:30:04.871 get user 2 details"},{"id":3,"group":3,"content":"demoTest[2:20]","start":732,"end":7181,"title":"demoTest[2:20] 05:30:00.732-05:30:07.181 get user 3 details"},{"id":4,"group":4,"content":"demoTest2[1:2]","start":732,"end":3974,"title":"demoTest2[1:2] 05:30:00.732-05:30:03.974 get user 3 details"},{"id":5,"group":5,"content":"DemoTestPost1[1:3]","start":732,"end":4232,"title":"DemoTestPost1[1:3] 05:30:00.732-05:30:04.232 Create User Details"},{"id":6,"group":4,"content":"getCall[1:2]","start":3984,"end":7707,"title":"getCall[1:2] 05:30:03.984-05:30:07.707 get user 3 details"},{"id":7,"group":5,"content":"readJava[1:3]","start":4243,"end":4264,"title":"readJava[1:3] 05:30:04.243-05:30:04.264 Reading Java functions"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

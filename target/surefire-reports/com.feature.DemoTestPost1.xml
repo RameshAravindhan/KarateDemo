@@ -1,0 +1,8 @@
+<testsuite failures="0" name="com/feature/DemoTestPost1.feature" skipped="0" tests="1" time="3.484554">
+  <testcase classname="com.feature.DemoTestPost1" name="Create User Details" time="3.484554">
+    <system-out>Given url 'https://reqres.in/api/users' ................................... passed
+And request '{"name": "morpheus","job": "leader"}' ........................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>
