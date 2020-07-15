@@ -1,0 +1,7 @@
+<testsuite failures="0" name="com/feature/demoTest2.feature" skipped="0" tests="1" time="1.899064">
+  <testcase classname="com.feature.demoTest2" name="get user 3 details" time="1.899064">
+    <system-out>Given url "https://reqres.in/api/users/3" ................................. passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>
