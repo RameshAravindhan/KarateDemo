@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.feature.TestRunner" time="9.002" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="com.feature.TestRunner" time="6.835" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_251\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,5 +65,1373 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.feature.TestRunner" name="testParallel" time="9.002"/>
+  <testcase classname="com.feature.TestRunner" name="testParallel" time="6.835">
+    <failure message="failed features:
+featurespackage.demoTest: -unknown-:4 - could not find or read file: ../jsonFiles/result.json
+-unknown-:4 - could not find or read file: ../jsonFiles/result.json
+" type="java.lang.AssertionError">java.lang.AssertionError: failed features:
+featurespackage.demoTest: -unknown-:4 - could not find or read file: ../jsonFiles/result.json
+-unknown-:4 - could not find or read file: ../jsonFiles/result.json
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at com.feature.TestRunner.testParallel(TestRunner.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>12:52:29.532 [main] INFO com.intuit.karate.Runner - waiting for parallel features to complete ...
+12:52:29.699 [ForkJoinPool-1-worker-5] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:29.699 [ForkJoinPool-1-worker-3] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:29.699 [ForkJoinPool-1-worker-4] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:29.702 [ForkJoinPool-1-worker-1] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:29.712 [ForkJoinPool-1-worker-2] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:29.755 [ForkJoinPool-1-worker-2] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:29.936 [pool-1-thread-2] INFO com.intuit.karate.Runner - &lt;&lt;fail&gt;&gt; feature 2 of 6: classpath:featurespackage/demoTest.feature
+---------------------------------------------------------
+feature: classpath:featurespackage/demoTest.feature
+report: target\surefire-reports\featurespackage.demoTest.json
+scenarios:  2 | passed:  0 | failed:  2 | time: 0.0128
+---------------------------------------------------------
+12:52:30.016 [ForkJoinPool-1-worker-2] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:30.045 [ForkJoinPool-1-worker-2] INFO com.intuit.karate - [print] Hello  World
+12:52:30.046 [ForkJoinPool-1-worker-2] INFO com.intuit.karate - [print] Hi  everybody
+12:52:30.052 [pool-1-thread-2] INFO com.intuit.karate.Runner - &lt;&lt;pass&gt;&gt; feature 6 of 6: classpath:featurespackage/readJava.feature
+---------------------------------------------------------
+feature: classpath:featurespackage/readJava.feature
+report: target\surefire-reports\featurespackage.readJava.json
+scenarios:  1 | passed:  1 | failed:  0 | time: 0.0289
+---------------------------------------------------------
+12:52:30.554 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+12:52:30.554 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+12:52:30.554 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+12:52:30.554 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+12:52:30.565 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+12:52:30.565 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+12:52:30.565 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+12:52:30.565 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+12:52:30.566 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - request:
+1 &gt; GET https://reqres.in/api/users/3
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+
+12:52:30.566 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+1 &gt; GET https://reqres.in/api/users/3
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+
+12:52:30.568 [ForkJoinPool-1-worker-4] DEBUG com.intuit.karate - request:
+1 &gt; POST https://reqres.in/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 36
+1 &gt; Content-Type: text/plain; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+{&quot;name&quot;: &quot;morpheus&quot;,&quot;job&quot;: &quot;leader&quot;}
+
+12:52:30.568 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 &gt; POST https://reqres.in/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 32
+1 &gt; Content-Type: text/plain; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+{&quot;name&quot;: morpheus,&quot;job&quot;: leader}
+
+12:52:30.568 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+12:52:30.568 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+12:52:30.569 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+12:52:30.569 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+12:52:30.593 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 2][route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:30.593 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:30.593 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 3][route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:30.593 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}-&gt;https://reqres.in:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:30.596 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://reqres.in:443
+12:52:30.596 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://reqres.in:443
+12:52:30.596 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://reqres.in:443
+12:52:30.596 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {s}-&gt;https://reqres.in:443
+12:52:30.743 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to reqres.in/172.67.222.36:443
+12:52:30.743 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to reqres.in/172.67.222.36:443
+12:52:30.743 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to reqres.in/172.67.222.36:443
+12:52:30.743 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to reqres.in/172.67.222.36:443 with timeout 30000
+12:52:30.744 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to reqres.in/172.67.222.36:443 with timeout 30000
+12:52:30.744 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to reqres.in/172.67.222.36:443 with timeout 30000
+12:52:30.747 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to reqres.in/172.67.222.36:443
+12:52:30.748 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to reqres.in/172.67.222.36:443 with timeout 30000
+12:52:30.991 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+12:52:30.991 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+12:52:30.991 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+12:52:30.991 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+12:52:30.991 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+12:52:30.991 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+12:52:30.991 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+12:52:30.993 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+12:52:30.992 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+12:52:30.992 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+12:52:30.994 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+12:52:30.994 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+12:52:31.323 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+12:52:31.324 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+12:52:31.324 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+12:52:31.324 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=sni.cloudflaressl.com, O=&quot;Cloudflare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.325 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.reqres.in, reqres.in, sni.cloudflaressl.com]
+12:52:31.325 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+12:52:31.325 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+12:52:31.325 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+12:52:31.325 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=CloudFlare Inc ECC CA-2, O=&quot;CloudFlare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.325 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+12:52:31.326 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+12:52:31.326 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=sni.cloudflaressl.com, O=&quot;Cloudflare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.326 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+12:52:31.326 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.reqres.in, reqres.in, sni.cloudflaressl.com]
+12:52:31.326 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=sni.cloudflaressl.com, O=&quot;Cloudflare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.326 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=CloudFlare Inc ECC CA-2, O=&quot;CloudFlare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.327 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.reqres.in, reqres.in, sni.cloudflaressl.com]
+12:52:31.327 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=CloudFlare Inc ECC CA-2, O=&quot;CloudFlare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.333 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+12:52:31.333 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+12:52:31.333 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+12:52:31.333 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=sni.cloudflaressl.com, O=&quot;Cloudflare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.333 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.reqres.in, reqres.in, sni.cloudflaressl.com]
+12:52:31.333 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=CloudFlare Inc ECC CA-2, O=&quot;CloudFlare, Inc.&quot;, L=San Francisco, ST=CA, C=US
+12:52:31.334 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.43.125:57262&lt;-&gt;172.67.222.36:443
+12:52:31.334 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.43.125:57261&lt;-&gt;172.67.222.36:443
+12:52:31.334 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.43.125:57263&lt;-&gt;172.67.222.36:443
+12:52:31.334 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.43.125:57264&lt;-&gt;172.67.222.36:443
+12:52:31.334 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 30000
+12:52:31.334 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: set socket timeout to 30000
+12:52:31.334 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 30000
+12:52:31.334 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 30000
+12:52:31.335 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/users HTTP/1.1
+12:52:31.335 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request GET /api/users/3 HTTP/1.1
+12:52:31.335 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request GET /api/users/3 HTTP/1.1
+12:52:31.335 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+12:52:31.335 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request POST /api/users HTTP/1.1
+12:52:31.335 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+12:52:31.335 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+12:52:31.335 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+12:52:31.337 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+12:52:31.337 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+12:52:31.337 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+12:52:31.337 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+12:52:31.341 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; POST /api/users HTTP/1.1
+12:52:31.341 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; POST /api/users HTTP/1.1
+12:52:31.341 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; GET /api/users/3 HTTP/1.1
+12:52:31.341 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; GET /api/users/3 HTTP/1.1
+12:52:31.341 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Host: reqres.in
+12:52:31.341 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Connection: Keep-Alive
+12:52:31.341 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+12:52:31.342 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &gt;&gt; Accept-Encoding: gzip,deflate
+12:52:31.342 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;GET /api/users/3 HTTP/1.1[\r][\n]&quot;
+12:52:31.342 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Host: reqres.in[\r][\n]&quot;
+12:52:31.342 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+12:52:31.342 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)[\r][\n]&quot;
+12:52:31.341 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Type: text/plain; charset=UTF-8
+12:52:31.341 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Content-Type: text/plain; charset=UTF-8
+12:52:31.341 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Host: reqres.in
+12:52:31.343 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Content-Length: 32
+12:52:31.343 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: reqres.in
+12:52:31.343 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
+12:52:31.343 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+12:52:31.343 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Accept-Encoding: gzip,deflate
+12:52:31.343 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+12:52:31.343 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Content-Length: 36
+12:52:31.343 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Connection: Keep-Alive
+12:52:31.344 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;[\r][\n]&quot;
+12:52:31.344 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Host: reqres.in
+12:52:31.344 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Connection: Keep-Alive
+12:52:31.344 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;POST /api/users HTTP/1.1[\r][\n]&quot;
+12:52:31.344 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+12:52:31.344 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Type: text/plain; charset=UTF-8[\r][\n]&quot;
+12:52:31.344 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+12:52:31.345 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &gt;&gt; Accept-Encoding: gzip,deflate
+12:52:31.345 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &gt;&gt; Accept-Encoding: gzip,deflate
+12:52:31.345 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Content-Length: 32[\r][\n]&quot;
+12:52:31.345 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;POST /api/users HTTP/1.1[\r][\n]&quot;
+12:52:31.345 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;GET /api/users/3 HTTP/1.1[\r][\n]&quot;
+12:52:31.345 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: reqres.in[\r][\n]&quot;
+12:52:31.345 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Content-Type: text/plain; charset=UTF-8[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Host: reqres.in[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Content-Length: 36[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Host: reqres.in[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+12:52:31.347 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+12:52:31.346 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
+12:52:31.347 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)[\r][\n]&quot;
+12:52:31.347 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;{&quot;name&quot;: morpheus,&quot;job&quot;: leader}&quot;
+12:52:31.347 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &gt;&gt; &quot;[\r][\n]&quot;
+12:52:31.347 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+12:52:31.347 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;[\r][\n]&quot;
+12:52:31.347 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &gt;&gt; &quot;{&quot;name&quot;: &quot;morpheus&quot;,&quot;job&quot;: &quot;leader&quot;}&quot;
+12:52:31.453 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+12:52:31.453 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Date: Thu, 16 Jul 2020 07:22:28 GMT[\r][\n]&quot;
+12:52:31.453 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+12:52:31.453 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Transfer-Encoding: chunked[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Set-Cookie: __cfduid=def0d4731b5e75fb768bef12f627db4711594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Access-Control-Allow-Origin: *[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Etag: W/&quot;16e-/dQyOreIv6pEupp8RbP+u+utK/A&quot;[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Cache-Control: max-age=14400[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;CF-Cache-Status: HIT[\r][\n]&quot;
+12:52:31.454 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Age: 1592[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;cf-request-id: 03f819e3640000df4b698d4200000001[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Vary: Accept-Encoding[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Server: cloudflare[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;CF-RAY: 5b39f8e5682ddf4b-BOM[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Content-Encoding: gzip[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;[\r][\n]&quot;
+12:52:31.455 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;111[\r][\n]&quot;
+12:52:31.456 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+12:52:31.456 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Date: Thu, 16 Jul 2020 07:22:28 GMT[\r][\n]&quot;
+12:52:31.456 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+12:52:31.457 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Transfer-Encoding: chunked[\r][\n]&quot;
+12:52:31.457 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+12:52:31.456 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3]E[0x8e]MN[0x3]1[0xc][0x85][0xaf]by[0x1d]M[0x4][0xdd][0xa0][0xac]@[0x88][0x13][0xb0][0xe8][0x12]Y[0x89]&apos;[\r][0x9d][0xc4][0x83][0xe3][0x99][0xa1]T[0xbd];j[0x8b][0xc4][0xe6]-[0xde][0x8f][0xbe]w[0xc6]DF[0x18][0xce]X[0x12][0x86][0x9d]C[0xae]T&amp;[0xc][0xc8][0xb5][0xd2][0xb0]I[0xcb][0xcf][0xca]_[0xca]}([\r][0x1d][0x8e]E[0xbb]}4[0xaa][0x8c][0x1][0xdf]j%t8[0xd1][0xbf][0xb5][0x97][0x96][0xd1]![0xad]d[0xa4][0x18][0xf0]`6[0xf7][0xe0]}[0xdf][\r]T[0xe9]G[0x1a]m}[0x88]R[0xfd]RF[0x8a][0xdc][0xfd]]m+f[0xac]^&amp;[0xce][0xb3]dI[0xc4][0xab]x|[0x1a]&gt;[0xe7][0x8c][0x17][0x87][0x94][0xae][0xf][0xa3][0xd4][0x99][0xda][0x9][0x3][0xbe][0x1b][0xd9][0xd2]_%1[0xec][0x99][0x8f][0xd3][0x9][0x1d].:[0xfd][0x1][0xaf][0xbc][!J[0xe2]A4{th[0xfc]m[0x18][0xf0][0x5][0xb6][0xdb][0x0][0x1a]o}[0xe2]+[0x15]F[0x89]K/-[0x83]4[0xe8]2[0xda]F[0xca][0x90]x[0xe5]I[0xe6][0xca][0xcd][0x1c][0x94]6*u[0xd3]%[0xda][0xa2][0xec][0xc0][0xe][0xc][0x9d]ueu0[0xb3][0x8e][0xa2][0x95]Zd[0x7][0xd4][0xd2]=4[0x8a]G[0xe0][0x96]@F[0xb0]Ci[0xb9][0xf]x[0xb9][0xfc][0x2],&apos;,[0x6]n[0x1][0x0][0x0][\r][\n]&quot;
+12:52:31.457 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Set-Cookie: __cfduid=d3db64a6f1334e0d2fff51cc2672ab6701594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure[\r][\n]&quot;
+12:52:31.457 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+12:52:31.457 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Access-Control-Allow-Origin: *[\r][\n]&quot;
+12:52:31.457 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Etag: W/&quot;16e-/dQyOreIv6pEupp8RbP+u+utK/A&quot;[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Cache-Control: max-age=14400[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;CF-Cache-Status: HIT[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Age: 1592[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;cf-request-id: 03f819e3700000df5fc49e2200000001[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Vary: Accept-Encoding[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Server: cloudflare[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;CF-RAY: 5b39f8e58ad1df5f-BOM[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;Content-Encoding: gzip[\r][\n]&quot;
+12:52:31.458 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;[\r][\n]&quot;
+12:52:31.459 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;111[\r][\n]&quot;
+12:52:31.459 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3]E[0x8e]MN[0x3]1[0xc][0x85][0xaf]by[0x1d]M[0x4][0xdd][0xa0][0xac]@[0x88][0x13][0xb0][0xe8][0x12]Y[0x89]&apos;[\r][0x9d][0xc4][0x83][0xe3][0x99][0xa1]T[0xbd];j[0x8b][0xc4][0xe6]-[0xde][0x8f][0xbe]w[0xc6]DF[0x18][0xce]X[0x12][0x86][0x9d]C[0xae]T&amp;[0xc][0xc8][0xb5][0xd2][0xb0]I[0xcb][0xcf][0xca]_[0xca]}([\r][0x1d][0x8e]E[0xbb]}4[0xaa][0x8c][0x1][0xdf]j%t8[0xd1][0xbf][0xb5][0x97][0x96][0xd1]![0xad]d[0xa4][0x18][0xf0]`6[0xf7][0xe0]}[0xdf][\r]T[0xe9]G[0x1a]m}[0x88]R[0xfd]RF[0x8a][0xdc][0xfd]]m+f[0xac]^&amp;[0xce][0xb3]dI[0xc4][0xab]x|[0x1a]&gt;[0xe7][0x8c][0x17][0x87][0x94][0xae][0xf][0xa3][0xd4][0x99][0xda][0x9][0x3][0xbe][0x1b][0xd9][0xd2]_%1[0xec][0x99][0x8f][0xd3][0x9][0x1d].:[0xfd][0x1][0xaf][0xbc][!J[0xe2]A4{th[0xfc]m[0x18][0xf0][0x5][0xb6][0xdb][0x0][0x1a]o}[0xe2]+[0x15]F[0x89]K/-[0x83]4[0xe8]2[0xda]F[0xca][0x90]x[0xe5]I[0xe6][0xca][0xcd][0x1c][0x94]6*u[0xd3]%[0xda][0xa2][0xec][0xc0][0xe][0xc][0x9d]ueu0[0xb3][0x8e][0xa2][0x95]Zd[0x7][0xd4][0xd2]=4[0x8a]G[0xe0][0x96]@F[0xb0]Ci[0xb9][0xf]x[0xb9][0xfc][0x2],&apos;,[0x6]n[0x1][0x0][0x0][\r][\n]&quot;
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; HTTP/1.1 200 OK
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; HTTP/1.1 200 OK
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Content-Type: application/json; charset=utf-8
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Content-Type: application/json; charset=utf-8
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Transfer-Encoding: chunked
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Transfer-Encoding: chunked
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Connection: keep-alive
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Connection: keep-alive
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Set-Cookie: __cfduid=def0d4731b5e75fb768bef12f627db4711594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Set-Cookie: __cfduid=d3db64a6f1334e0d2fff51cc2672ab6701594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; X-Powered-By: Express
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; X-Powered-By: Express
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Access-Control-Allow-Origin: *
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Access-Control-Allow-Origin: *
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Etag: W/&quot;16e-/dQyOreIv6pEupp8RbP+u+utK/A&quot;
+12:52:31.464 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Etag: W/&quot;16e-/dQyOreIv6pEupp8RbP+u+utK/A&quot;
+12:52:31.464 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Via: 1.1 vegur
+12:52:31.465 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Cache-Control: max-age=14400
+12:52:31.465 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; CF-Cache-Status: HIT
+12:52:31.465 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Age: 1592
+12:52:31.465 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Via: 1.1 vegur
+12:52:31.465 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; cf-request-id: 03f819e3640000df4b698d4200000001
+12:52:31.465 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Cache-Control: max-age=14400
+12:52:31.465 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+12:52:31.465 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; CF-Cache-Status: HIT
+12:52:31.465 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Vary: Accept-Encoding
+12:52:31.465 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Age: 1592
+12:52:31.465 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; cf-request-id: 03f819e3700000df5fc49e2200000001
+12:52:31.465 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Server: cloudflare
+12:52:31.466 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+12:52:31.466 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Vary: Accept-Encoding
+12:52:31.466 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; CF-RAY: 5b39f8e5682ddf4b-BOM
+12:52:31.466 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Server: cloudflare
+12:52:31.466 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.headers - http-outgoing-3 &lt;&lt; Content-Encoding: gzip
+12:52:31.466 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; CF-RAY: 5b39f8e58ad1df5f-BOM
+12:52:31.466 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.headers - http-outgoing-2 &lt;&lt; Content-Encoding: gzip
+12:52:31.474 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+12:52:31.474 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+12:52:31.495 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [__cfduid=&quot;def0d4731b5e75fb768bef12f627db4711594884148&quot;, version:0, domain:reqres.in, path:/, expiry:Sat Aug 15 12:52:28 IST 2020]
+12:52:31.495 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [__cfduid=&quot;d3db64a6f1334e0d2fff51cc2672ab6701594884148&quot;, version:0, domain:reqres.in, path:/, expiry:Sat Aug 15 12:52:28 IST 2020]
+12:52:31.500 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;0[\r][\n]&quot;
+12:52:31.500 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;0[\r][\n]&quot;
+12:52:31.500 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.wire - http-outgoing-2 &lt;&lt; &quot;[\r][\n]&quot;
+12:52:31.500 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;[\r][\n]&quot;
+12:52:31.500 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {s}-&gt;https://reqres.in:443] can be kept alive indefinitely
+12:52:31.500 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: set socket timeout to 0
+12:52:31.500 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 3][route: {s}-&gt;https://reqres.in:443] can be kept alive indefinitely
+12:52:31.500 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 0
+12:52:31.500 [ForkJoinPool-1-worker-3] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {s}-&gt;https://reqres.in:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:31.500 [ForkJoinPool-1-worker-5] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 3][route: {s}-&gt;https://reqres.in:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:31.500 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 930.77
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 1592
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5b39f8e58ad1df5f-BOM
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+1 &lt; Etag: W/&quot;16e-/dQyOreIv6pEupp8RbP+u+utK/A&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d3db64a6f1334e0d2fff51cc2672ab6701594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 03f819e3700000df5fc49e2200000001
+{&quot;data&quot;:{&quot;id&quot;:3,&quot;email&quot;:&quot;emma.wong@reqres.in&quot;,&quot;first_name&quot;:&quot;Emma&quot;,&quot;last_name&quot;:&quot;Wong&quot;,&quot;avatar&quot;:&quot;https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg&quot;},&quot;ad&quot;:{&quot;company&quot;:&quot;StatusCode Weekly&quot;,&quot;url&quot;:&quot;http://statuscode.org/&quot;,&quot;text&quot;:&quot;A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.&quot;}}
+
+12:52:31.500 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - response time in milliseconds: 930.76
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 1592
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5b39f8e5682ddf4b-BOM
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+1 &lt; Etag: W/&quot;16e-/dQyOreIv6pEupp8RbP+u+utK/A&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=def0d4731b5e75fb768bef12f627db4711594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 03f819e3640000df4b698d4200000001
+{&quot;data&quot;:{&quot;id&quot;:3,&quot;email&quot;:&quot;emma.wong@reqres.in&quot;,&quot;first_name&quot;:&quot;Emma&quot;,&quot;last_name&quot;:&quot;Wong&quot;,&quot;avatar&quot;:&quot;https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg&quot;},&quot;ad&quot;:{&quot;company&quot;:&quot;StatusCode Weekly&quot;,&quot;url&quot;:&quot;http://statuscode.org/&quot;,&quot;text&quot;:&quot;A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.&quot;}}
+
+12:52:31.525 [pool-1-thread-3] INFO com.intuit.karate.Runner - &lt;&lt;pass&gt;&gt; feature 3 of 6: classpath:featurespackage/demoTest2.feature
+---------------------------------------------------------
+feature: classpath:featurespackage/demoTest2.feature
+report: target\surefire-reports\featurespackage.demoTest2.json
+scenarios:  1 | passed:  1 | failed:  0 | time: 1.7878
+---------------------------------------------------------
+12:52:31.546 [ForkJoinPool-1-worker-5] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+12:52:31.575 [ForkJoinPool-1-worker-5] INFO com.intuit.karate - [print]  Return Value----- Hello
+12:52:31.591 [ForkJoinPool-1-worker-5] INFO com.intuit.karate - [print] Second return value------ 
+12:52:31.598 [pool-1-thread-5] INFO com.intuit.karate.Runner - &lt;&lt;pass&gt;&gt; feature 5 of 6: classpath:featurespackage/getCall.feature
+---------------------------------------------------------
+feature: classpath:featurespackage/getCall.feature
+report: target\surefire-reports\featurespackage.getCall.json
+scenarios:  1 | passed:  1 | failed:  0 | time: 1.8569
+---------------------------------------------------------
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 201 Created[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Date: Thu, 16 Jul 2020 07:22:28 GMT[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Content-Length: 51[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Set-Cookie: __cfduid=de7ae42d1ee53c9b54315b5f7cab311961594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Access-Control-Allow-Origin: *[\r][\n]&quot;
+12:52:31.776 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Etag: W/&quot;33-LiudrSedCYizLlm1bDWgLk2vpnc&quot;[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;CF-Cache-Status: DYNAMIC[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;cf-request-id: 03f819e36b0000df571c07a200000001[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Server: cloudflare[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;CF-RAY: 5b39f8e57e70df57-BOM[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;{&quot;id&quot;:&quot;664&quot;,&quot;createdAt&quot;:&quot;2020-07-16T07:22:28.302Z&quot;}&quot;
+12:52:31.777 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 201 Created
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Type: application/json; charset=utf-8
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Content-Length: 51
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Connection: keep-alive
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Set-Cookie: __cfduid=de7ae42d1ee53c9b54315b5f7cab311961594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; X-Powered-By: Express
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Access-Control-Allow-Origin: *
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Etag: W/&quot;33-LiudrSedCYizLlm1bDWgLk2vpnc&quot;
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Via: 1.1 vegur
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; CF-Cache-Status: DYNAMIC
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; cf-request-id: 03f819e36b0000df571c07a200000001
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Server: cloudflare
+12:52:31.778 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; CF-RAY: 5b39f8e57e70df57-BOM
+12:52:31.779 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+12:52:31.780 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [__cfduid=&quot;de7ae42d1ee53c9b54315b5f7cab311961594884148&quot;, version:0, domain:reqres.in, path:/, expiry:Sat Aug 15 12:52:28 IST 2020]
+12:52:31.781 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 2][route: {s}-&gt;https://reqres.in:443] can be kept alive indefinitely
+12:52:31.781 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 0
+12:52:31.781 [ForkJoinPool-1-worker-1] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 2][route: {s}-&gt;https://reqres.in:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:31.781 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1212.64
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5b39f8e57e70df57-BOM
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 51
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+1 &lt; Etag: W/&quot;33-LiudrSedCYizLlm1bDWgLk2vpnc&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=de7ae42d1ee53c9b54315b5f7cab311961594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 03f819e36b0000df571c07a200000001
+{&quot;id&quot;:&quot;664&quot;,&quot;createdAt&quot;:&quot;2020-07-16T07:22:28.302Z&quot;}
+
+12:52:31.785 [ForkJoinPool-1-worker-1] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+12:52:31.785 [ForkJoinPool-1-worker-1] INFO com.intuit.karate - [print] {
+  &quot;createdAt&quot;: &quot;2020-07-16T07:22:28.302Z&quot;,
+  &quot;id&quot;: &quot;664&quot;
+}
+
+12:52:31.792 [pool-1-thread-1] INFO com.intuit.karate.Runner - &lt;&lt;pass&gt;&gt; feature 1 of 6: classpath:featurespackage/dataDriven.feature
+---------------------------------------------------------
+feature: classpath:featurespackage/dataDriven.feature
+report: target\surefire-reports\featurespackage.dataDriven.json
+scenarios:  1 | passed:  1 | failed:  0 | time: 2.0557
+---------------------------------------------------------
+12:52:31.803 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;HTTP/1.1 201 Created[\r][\n]&quot;
+12:52:31.803 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Date: Thu, 16 Jul 2020 07:22:28 GMT[\r][\n]&quot;
+12:52:31.803 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Content-Type: application/json; charset=utf-8[\r][\n]&quot;
+12:52:31.803 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Content-Length: 51[\r][\n]&quot;
+12:52:31.803 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Set-Cookie: __cfduid=d997c637cf216c0223d43a09de696e2431594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;X-Powered-By: Express[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Access-Control-Allow-Origin: *[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Etag: W/&quot;33-S6J/u4SkDSp2rzhNMYunehhRT2o&quot;[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Via: 1.1 vegur[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;CF-Cache-Status: DYNAMIC[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;cf-request-id: 03f819e3730000e15a481ea200000001[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;Server: cloudflare[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;CF-RAY: 5b39f8e58bc8e15a-BOM[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;[\r][\n]&quot;
+12:52:31.804 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.wire - http-outgoing-1 &lt;&lt; &quot;{&quot;id&quot;:&quot;135&quot;,&quot;createdAt&quot;:&quot;2020-07-16T07:22:28.361Z&quot;}&quot;
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; HTTP/1.1 201 Created
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Content-Type: application/json; charset=utf-8
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Content-Length: 51
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Connection: keep-alive
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Set-Cookie: __cfduid=d997c637cf216c0223d43a09de696e2431594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; X-Powered-By: Express
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Access-Control-Allow-Origin: *
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Etag: W/&quot;33-S6J/u4SkDSp2rzhNMYunehhRT2o&quot;
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Via: 1.1 vegur
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; CF-Cache-Status: DYNAMIC
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; cf-request-id: 03f819e3730000e15a481ea200000001
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; Server: cloudflare
+12:52:31.805 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.headers - http-outgoing-1 &lt;&lt; CF-RAY: 5b39f8e58bc8e15a-BOM
+12:52:31.806 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+12:52:31.807 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.client.protocol.ResponseProcessCookies - Cookie accepted [__cfduid=&quot;d997c637cf216c0223d43a09de696e2431594884148&quot;, version:0, domain:reqres.in, path:/, expiry:Sat Aug 15 12:52:28 IST 2020]
+12:52:31.807 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}-&gt;https://reqres.in:443] can be kept alive indefinitely
+12:52:31.807 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 0
+12:52:31.807 [ForkJoinPool-1-worker-4] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}-&gt;https://reqres.in:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+12:52:31.808 [ForkJoinPool-1-worker-4] DEBUG com.intuit.karate - response time in milliseconds: 1239.28
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 5b39f8e58bc8e15a-BOM
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 51
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+1 &lt; Etag: W/&quot;33-S6J/u4SkDSp2rzhNMYunehhRT2o&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d997c637cf216c0223d43a09de696e2431594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 03f819e3730000e15a481ea200000001
+{&quot;id&quot;:&quot;135&quot;,&quot;createdAt&quot;:&quot;2020-07-16T07:22:28.361Z&quot;}
+
+12:52:31.816 [pool-1-thread-4] INFO com.intuit.karate.Runner - &lt;&lt;pass&gt;&gt; feature 4 of 6: classpath:featurespackage/DemoTestPost1.feature
+---------------------------------------------------------
+feature: classpath:featurespackage/DemoTestPost1.feature
+report: target\surefire-reports\featurespackage.DemoTestPost1.json
+scenarios:  1 | passed:  1 | failed:  0 | time: 2.0782
+---------------------------------------------------------
+Karate version: 0.9.5
+======================================================
+elapsed:   3.38 | threads:    5 | thread time: 7.82 
+features:     6 | ignored:    0 | efficiency: 0.46
+scenarios:    7 | passed:     5 | failed: 2
+======================================================
+failed features:
+featurespackage.demoTest: -unknown-:4 - could not find or read file: ../jsonFiles/result.json
+-unknown-:4 - could not find or read file: ../jsonFiles/result.json
+
+12:52:32.724 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:32.724 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:32.728 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:32.739 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:32.741 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:32.744 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:32.746 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:32.747 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:32.749 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:32.750 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:32.752 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:32.755 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:32.757 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:32.810 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:32.852 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:32.854 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:32.854 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:32.854 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:32.854 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:32.855 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:32.855 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:32.855 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:32.855 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.014 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/overviewFeatures.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.022 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.023 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.030 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@628c4ac0
+12:52:33.031 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@628c4ac0
+12:52:33.031 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.033 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@363042d7
+12:52:33.033 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.037 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@2cc44ad
+12:52:33.038 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.040 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@663411de
+12:52:33.040 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.054 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@6ee660fb
+12:52:33.054 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.060 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@22ffa91a
+12:52:33.060 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.065 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@40844aab
+12:52:33.065 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.068 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@66746f57
+12:52:33.068 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.079 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@767e20cf
+12:52:33.079 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.085 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@c5dc4a2
+12:52:33.085 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.104 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@5669c5fb
+12:52:33.105 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.109 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@c4ed84
+12:52:33.109 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.113 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@362045c0
+12:52:33.113 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.116 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@59252cb6
+12:52:33.116 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.126 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@1d730606
+12:52:33.126 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.154 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@59f63e24
+12:52:33.155 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@59f63e24
+12:52:33.156 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@59f63e24
+12:52:33.158 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@59f63e24
+12:52:33.159 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@59f63e24
+12:52:33.161 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@59f63e24
+12:52:33.163 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@59f63e24
+12:52:33.164 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.177 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@fade1fc
+12:52:33.178 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.185 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@7103cb56
+12:52:33.185 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.188 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@6ebf0f36
+12:52:33.189 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.195 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@72c28d64
+12:52:33.195 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.198 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@39a8312f
+12:52:33.198 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.200 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@294e5088
+12:52:33.200 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.213 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/js/steps-chart.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.221 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/js/scenarios-chart.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.223 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/js/features-chart.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.298 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.299 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.299 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.300 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.301 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.301 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.302 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.304 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.304 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.304 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.304 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.305 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.305 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.305 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.305 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.305 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.305 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.308 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/reportFeature.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.310 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.312 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.314 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@3381b4fc
+12:52:33.314 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@3381b4fc
+12:52:33.314 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.316 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@5c42d2b7
+12:52:33.316 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.317 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@aeab9a1
+12:52:33.318 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.320 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@55342f40
+12:52:33.320 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.322 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@31aa3ca5
+12:52:33.322 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.324 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@b6b1987
+12:52:33.324 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.326 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@66b7550d
+12:52:33.326 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.328 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@3542162a
+12:52:33.328 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.332 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@1e7aa82b
+12:52:33.332 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.334 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@c1bd0be
+12:52:33.334 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.340 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@655f7ea
+12:52:33.340 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.343 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@17a87e37
+12:52:33.343 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.346 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@39ad977d
+12:52:33.346 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.347 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@20f12539
+12:52:33.348 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.350 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@13cf7d52
+12:52:33.350 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.363 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@57459491
+12:52:33.363 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@57459491
+12:52:33.364 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@57459491
+12:52:33.365 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@57459491
+12:52:33.365 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@57459491
+12:52:33.365 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@57459491
+12:52:33.366 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@57459491
+12:52:33.366 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.370 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@78fbff54
+12:52:33.371 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.373 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@45e37a7e
+12:52:33.374 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.376 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@5a7005d
+12:52:33.376 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.382 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@7516e4e5
+12:52:33.382 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.384 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@4189d70b
+12:52:33.385 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.387 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@6f0b0a5e
+12:52:33.387 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.388 [main] DEBUG org.apache.velocity.macro - VM #includeNavigation: too few arguments to macro. Wanted 1 got 0
+12:52:33.389 [main] DEBUG org.apache.velocity.macro - VM #includeLead: too few arguments to macro. Wanted 2 got 1
+12:52:33.393 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 3
+12:52:33.398 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.400 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.412 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.413 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.413 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.416 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.417 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.417 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.418 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.419 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.421 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.421 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.421 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.421 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.421 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.421 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.441 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.442 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.444 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.446 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.448 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.448 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.448 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.448 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.448 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.448 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.453 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/reportFeature.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.458 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.459 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.461 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@10993713
+12:52:33.462 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@10993713
+12:52:33.462 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.464 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@72cf2de5
+12:52:33.464 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.466 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@4ee37ca3
+12:52:33.466 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.468 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@14b030a0
+12:52:33.468 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.471 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@18230356
+12:52:33.471 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.473 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@75d0911a
+12:52:33.473 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.475 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@531c311e
+12:52:33.475 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.476 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@726e5805
+12:52:33.477 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.481 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@ea9b7c6
+12:52:33.481 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.482 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@7c2b6087
+12:52:33.483 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.487 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@1c7fd41f
+12:52:33.487 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.489 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@2e11485
+12:52:33.489 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.490 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@fd8294b
+12:52:33.491 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.492 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@1ef3efa8
+12:52:33.492 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.496 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@75c9e76b
+12:52:33.496 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.504 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@4fbda97b
+12:52:33.505 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@4fbda97b
+12:52:33.505 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@4fbda97b
+12:52:33.505 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@4fbda97b
+12:52:33.506 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@4fbda97b
+12:52:33.506 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@4fbda97b
+12:52:33.506 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@4fbda97b
+12:52:33.507 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.510 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@306851c7
+12:52:33.511 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.514 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@47db5fa5
+12:52:33.514 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.516 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@4678a2eb
+12:52:33.516 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.520 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@58ebfd03
+12:52:33.520 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.522 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@a4b2d8f
+12:52:33.522 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.524 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@f73dcd6
+12:52:33.524 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.525 [main] DEBUG org.apache.velocity.macro - VM #includeNavigation: too few arguments to macro. Wanted 1 got 0
+12:52:33.525 [main] DEBUG org.apache.velocity.macro - VM #includeLead: too few arguments to macro. Wanted 2 got 1
+12:52:33.532 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 3
+12:52:33.533 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.534 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.544 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.545 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.563 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.565 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.568 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.568 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.572 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.574 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.574 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.574 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.575 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.575 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.576 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.577 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.577 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.578 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.578 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.578 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.578 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.578 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.578 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.578 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.579 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.579 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.581 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.581 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.581 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.581 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.581 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.581 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.583 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/reportFeature.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.585 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.586 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.587 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@30990c1b
+12:52:33.587 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@30990c1b
+12:52:33.588 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.589 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@2dbe250d
+12:52:33.589 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.590 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@3e34ace1
+12:52:33.590 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.591 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@4de41af9
+12:52:33.592 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.595 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@305f7627
+12:52:33.595 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.596 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@29e6eb25
+12:52:33.596 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.597 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@38be305c
+12:52:33.598 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.599 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@3234f74e
+12:52:33.599 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.601 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@40e10ff8
+12:52:33.601 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.603 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@7e38a7fe
+12:52:33.603 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.606 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@31e75d13
+12:52:33.606 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.607 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@78fb9a67
+12:52:33.608 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.609 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@b968a76
+12:52:33.609 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.610 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@54227100
+12:52:33.610 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.613 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@3f446bef
+12:52:33.613 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.618 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@5b64c4b7
+12:52:33.620 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@5b64c4b7
+12:52:33.620 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@5b64c4b7
+12:52:33.620 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@5b64c4b7
+12:52:33.620 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@5b64c4b7
+12:52:33.620 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@5b64c4b7
+12:52:33.621 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@5b64c4b7
+12:52:33.621 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.624 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@61bcd567
+12:52:33.624 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.626 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@15c25153
+12:52:33.626 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.628 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@56276db8
+12:52:33.628 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.632 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@36676c1a
+12:52:33.632 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.634 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@2dbf4cbd
+12:52:33.634 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.635 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@7e3060d8
+12:52:33.635 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.636 [main] DEBUG org.apache.velocity.macro - VM #includeNavigation: too few arguments to macro. Wanted 1 got 0
+12:52:33.636 [main] DEBUG org.apache.velocity.macro - VM #includeLead: too few arguments to macro. Wanted 2 got 1
+12:52:33.638 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 3
+12:52:33.639 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.640 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.645 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.645 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.645 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.647 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.647 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.647 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.648 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.649 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.650 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.650 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.651 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.651 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.651 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.651 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.651 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.651 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.651 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.652 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/reportFeature.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.654 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.655 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.656 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@6e4de19b
+12:52:33.656 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@6e4de19b
+12:52:33.656 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.658 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@18518ccf
+12:52:33.658 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.659 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@4c6daf0
+12:52:33.660 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.662 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@162be91c
+12:52:33.662 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.663 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@55787112
+12:52:33.663 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.665 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@1992eaf4
+12:52:33.665 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.666 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@3f28bd56
+12:52:33.666 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.667 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@21d8bcbe
+12:52:33.667 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.670 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@18245eb0
+12:52:33.670 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.671 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@48c35007
+12:52:33.671 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.674 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@18f20260
+12:52:33.674 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.676 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@b40bb6e
+12:52:33.676 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.678 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@6d0b5baf
+12:52:33.678 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.679 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@34a75079
+12:52:33.679 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.681 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@1643d68f
+12:52:33.681 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.686 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@482d776b
+12:52:33.686 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@482d776b
+12:52:33.686 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@482d776b
+12:52:33.687 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@482d776b
+12:52:33.687 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@482d776b
+12:52:33.687 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@482d776b
+12:52:33.688 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@482d776b
+12:52:33.688 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.690 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@297ea53a
+12:52:33.690 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.692 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@267f474e
+12:52:33.692 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.694 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@62e70ea3
+12:52:33.694 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.696 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@741b3bc3
+12:52:33.696 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.697 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@68d6972f
+12:52:33.697 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.698 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@3185fa6b
+12:52:33.699 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.699 [main] DEBUG org.apache.velocity.macro - VM #includeNavigation: too few arguments to macro. Wanted 1 got 0
+12:52:33.700 [main] DEBUG org.apache.velocity.macro - VM #includeLead: too few arguments to macro. Wanted 2 got 1
+12:52:33.701 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 3
+12:52:33.702 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.702 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.706 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.707 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.707 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.709 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.709 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.709 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.710 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.711 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.711 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.711 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.711 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.711 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.711 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.711 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.712 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.712 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.713 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.713 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.713 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.713 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.713 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.713 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.713 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.713 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.714 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/reportFeature.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.717 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.718 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.719 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@452ba1db
+12:52:33.719 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@452ba1db
+12:52:33.719 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.721 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@184497d1
+12:52:33.721 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.723 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@26fb628
+12:52:33.723 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.724 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@4a9f80d3
+12:52:33.724 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.726 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@5ac86ba5
+12:52:33.727 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.728 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@191ae03f
+12:52:33.729 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.730 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@63c5efee
+12:52:33.730 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.732 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@172ca72b
+12:52:33.732 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.734 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@2ce86164
+12:52:33.734 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.735 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@fd46303
+12:52:33.735 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.739 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@6a62689d
+12:52:33.739 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.740 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@3e2822
+12:52:33.740 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.741 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@1849db1a
+12:52:33.741 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.743 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@5fcacc0
+12:52:33.743 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.745 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@89ff02e
+12:52:33.745 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.751 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@6a988392
+12:52:33.751 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@6a988392
+12:52:33.751 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@6a988392
+12:52:33.751 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@6a988392
+12:52:33.752 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@6a988392
+12:52:33.752 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@6a988392
+12:52:33.753 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@6a988392
+12:52:33.753 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.755 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@5f2606b
+12:52:33.755 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.758 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@2552f2cb
+12:52:33.758 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.759 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@1e044120
+12:52:33.759 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.761 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@35fe2125
+12:52:33.761 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.763 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@2484f433
+12:52:33.763 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.764 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@464649c
+12:52:33.764 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.765 [main] DEBUG org.apache.velocity.macro - VM #includeNavigation: too few arguments to macro. Wanted 1 got 0
+12:52:33.765 [main] DEBUG org.apache.velocity.macro - VM #includeLead: too few arguments to macro. Wanted 2 got 1
+12:52:33.766 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 3
+12:52:33.768 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.768 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.776 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.777 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.777 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.779 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.779 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.779 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.780 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.781 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.781 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.782 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.782 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.782 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.783 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.783 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.783 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.783 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.783 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.784 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/reportFeature.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.786 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.787 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.788 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@7bf9b098
+12:52:33.788 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@7bf9b098
+12:52:33.788 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.789 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@1fc0053e
+12:52:33.789 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.790 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@33617539
+12:52:33.790 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.792 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@209775a9
+12:52:33.792 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.794 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@74cec793
+12:52:33.794 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.795 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@1bdf8190
+12:52:33.795 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.797 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@c65a5ef
+12:52:33.797 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.798 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@2fab4aff
+12:52:33.798 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.799 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@5cc69cfe
+12:52:33.799 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.800 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@7997b197
+12:52:33.801 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.804 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@55f3c410
+12:52:33.804 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.805 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@4a8ab068
+12:52:33.805 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.806 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@6bab2585
+12:52:33.807 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.808 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@532a02d9
+12:52:33.808 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.810 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@7cbee484
+12:52:33.810 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.815 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@4089713
+12:52:33.815 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@4089713
+12:52:33.815 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@4089713
+12:52:33.815 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@4089713
+12:52:33.815 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@4089713
+12:52:33.815 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@4089713
+12:52:33.815 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@4089713
+12:52:33.815 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.818 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@b91d8c4
+12:52:33.818 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.820 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@4fd4cae3
+12:52:33.820 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.821 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@3bde62ff
+12:52:33.822 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.824 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@319dead1
+12:52:33.824 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.826 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@754777cd
+12:52:33.826 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.827 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@4cc76301
+12:52:33.828 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.828 [main] DEBUG org.apache.velocity.macro - VM #includeNavigation: too few arguments to macro. Wanted 1 got 0
+12:52:33.829 [main] DEBUG org.apache.velocity.macro - VM #includeLead: too few arguments to macro. Wanted 2 got 1
+12:52:33.830 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 3
+12:52:33.831 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.832 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:33.837 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.839 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.839 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.840 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.840 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.840 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.841 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.843 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.843 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.844 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.844 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.845 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.845 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.845 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.845 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.845 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.845 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.846 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/overviewTags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.848 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.849 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.850 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@44a2b17b
+12:52:33.850 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@44a2b17b
+12:52:33.850 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.851 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@7eb01b12
+12:52:33.851 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.853 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@7e70bd39
+12:52:33.853 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.854 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@43ed0ff3
+12:52:33.854 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.855 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@4da855dd
+12:52:33.855 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.857 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@2e5c7f0b
+12:52:33.857 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.858 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@538613b3
+12:52:33.858 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.859 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@5db99216
+12:52:33.859 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.861 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@9f46d94
+12:52:33.862 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.863 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@2c4ca0f9
+12:52:33.863 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.866 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@6e57e95e
+12:52:33.866 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.868 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@740abb5
+12:52:33.868 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.869 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@551a20d6
+12:52:33.869 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.870 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@7e094740
+12:52:33.870 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.872 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@7555b920
+12:52:33.872 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.877 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@5398edd0
+12:52:33.877 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@5398edd0
+12:52:33.877 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@5398edd0
+12:52:33.878 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@5398edd0
+12:52:33.878 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@5398edd0
+12:52:33.878 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@5398edd0
+12:52:33.878 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@5398edd0
+12:52:33.878 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.881 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@61edc883
+12:52:33.881 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.882 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@6928f576
+12:52:33.882 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.884 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@9cd25ff
+12:52:33.884 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.886 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@6db66836
+12:52:33.886 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.888 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@3f093abe
+12:52:33.888 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.889 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@780ec4a5
+12:52:33.890 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.892 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/js/tags-chart.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.895 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.896 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.896 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.897 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.897 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.897 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.898 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.898 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.898 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.898 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.899 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.899 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.899 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.899 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.900 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.900 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.901 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.901 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.902 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.902 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.902 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.902 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.902 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.902 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.904 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/overviewSteps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.906 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.907 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.908 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@64f857e7
+12:52:33.908 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@64f857e7
+12:52:33.908 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.908 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@3d6300e8
+12:52:33.908 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.910 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@56102e1c
+12:52:33.910 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.912 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@532721fd
+12:52:33.912 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.912 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@3b366632
+12:52:33.912 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.914 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@617fe9e1
+12:52:33.914 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.914 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@3af4e0bf
+12:52:33.914 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.915 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@466cf502
+12:52:33.915 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.917 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@7e1a1da6
+12:52:33.917 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.919 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@6815c5f2
+12:52:33.919 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.923 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@5aceec94
+12:52:33.923 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.923 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@10b892d5
+12:52:33.923 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.925 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@579d011c
+12:52:33.925 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.927 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@46ab18da
+12:52:33.928 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.929 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@7689ddef
+12:52:33.929 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.934 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@733c423e
+12:52:33.934 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@733c423e
+12:52:33.934 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@733c423e
+12:52:33.934 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@733c423e
+12:52:33.935 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@733c423e
+12:52:33.935 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@733c423e
+12:52:33.935 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@733c423e
+12:52:33.935 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.937 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@1b9ea3e3
+12:52:33.938 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.939 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@37cd92d6
+12:52:33.939 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.941 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@2af616d3
+12:52:33.941 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.944 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@62d363ab
+12:52:33.944 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.946 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@5ef8df1e
+12:52:33.946 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.947 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@5910de75
+12:52:33.947 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.950 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.952 [main] DEBUG org.apache.velocity - Initializing Velocity, Calling init()...
+12:52:33.952 [main] DEBUG org.apache.velocity - Starting Apache Velocity v2.0
+12:52:33.953 [main] DEBUG org.apache.velocity - Default Properties resource: org/apache/velocity/runtime/defaults/velocity.properties
+12:52:33.953 [main] DEBUG org.apache.velocity - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.953 [main] DEBUG org.apache.velocity - initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+12:52:33.955 [main] DEBUG org.apache.velocity - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+12:52:33.955 [main] DEBUG org.apache.velocity.parser - Created &apos;20&apos; parsers.
+12:52:33.956 [main] DEBUG org.apache.velocity.macro - &quot;velocimacro.library.path&quot; is not set. Trying default library: velocimacros.vtl
+12:52:33.956 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;velocimacros.vtl&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.956 [main] DEBUG org.apache.velocity.macro - Default library velocimacros.vtl not found. Trying old default library: VM_global_library.vm
+12:52:33.956 [main] DEBUG org.apache.velocity.loader.class - Could not load resource &apos;VM_global_library.vm&apos; from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.957 [main] DEBUG org.apache.velocity.macro - Old default library VM_global_library.vm not found.
+12:52:33.957 [main] DEBUG org.apache.velocity.macro - allowInline = true: VMs can be defined inline in templates
+12:52:33.957 [main] DEBUG org.apache.velocity.macro - allowInlineToOverride = false: VMs defined inline may NOT replace previous VM definitions
+12:52:33.957 [main] DEBUG org.apache.velocity.macro - allowInlineLocal = false: VMs defined inline will be global in scope if allowed.
+12:52:33.957 [main] DEBUG org.apache.velocity.macro - autoload off: VM system will not automatically reload global library macros
+12:52:33.959 [main] DEBUG org.apache.velocity.loader - ResourceManager: found templates/generators/overviewFailures.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.961 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/headers.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.962 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/head.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.963 [main] DEBUG org.apache.velocity.macro - added VM stringArray: source=org.apache.velocity.Template@56b78e55
+12:52:33.963 [main] DEBUG org.apache.velocity.macro - added VM numberArray: source=org.apache.velocity.Template@56b78e55
+12:52:33.963 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/array.js.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.964 [main] DEBUG org.apache.velocity.macro - added VM includeBuildInfo: source=org.apache.velocity.Template@3277e499
+12:52:33.964 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/buildinfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.965 [main] DEBUG org.apache.velocity.macro - added VM includeClassifications: source=org.apache.velocity.Template@411341bd
+12:52:33.965 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/classifications.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.966 [main] DEBUG org.apache.velocity.macro - added VM includeLead: source=org.apache.velocity.Template@76b74e9c
+12:52:33.966 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/lead.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.967 [main] DEBUG org.apache.velocity.macro - added VM includeNavigation: source=org.apache.velocity.Template@5aa0dbf4
+12:52:33.967 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/navigation.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.968 [main] DEBUG org.apache.velocity.macro - added VM includeReportInfo: source=org.apache.velocity.Template@7fe083b1
+12:52:33.968 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/reportInfo.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.969 [main] DEBUG org.apache.velocity.macro - added VM includeTitle: source=org.apache.velocity.Template@f713686
+12:52:33.969 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/page/title.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.970 [main] DEBUG org.apache.velocity.macro - added VM includeExpandingButtons: source=org.apache.velocity.Template@5ca17ab0
+12:52:33.970 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/expandAllButtons.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.973 [main] DEBUG org.apache.velocity.macro - added VM includeReportTable: source=org.apache.velocity.Template@35293c05
+12:52:33.973 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.973 [main] DEBUG org.apache.velocity.macro - added VM includeReportHeader: source=org.apache.velocity.Template@3174cb09
+12:52:33.974 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/reportHeader.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.977 [main] DEBUG org.apache.velocity.macro - added VM includeStatsTable: source=org.apache.velocity.Template@41beb473
+12:52:33.977 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/report/statsTable.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.978 [main] DEBUG org.apache.velocity.macro - added VM includeBrief: source=org.apache.velocity.Template@37fbe4a8
+12:52:33.978 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/brief.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.979 [main] DEBUG org.apache.velocity.macro - added VM includeDocString: source=org.apache.velocity.Template@6d6bc158
+12:52:33.980 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/docstring.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.981 [main] DEBUG org.apache.velocity.macro - added VM includeDuration: source=org.apache.velocity.Template@54afd745
+12:52:33.981 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/duration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.982 [main] DEBUG org.apache.velocity.macro - added VM includeElement: source=org.apache.velocity.Template@c00fff0
+12:52:33.982 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/element.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.987 [main] DEBUG org.apache.velocity.macro - added VM includeEmbeddings: source=org.apache.velocity.Template@5a021cb9
+12:52:33.987 [main] DEBUG org.apache.velocity.macro - added VM includeHtmlEmbedding: source=org.apache.velocity.Template@5a021cb9
+12:52:33.987 [main] DEBUG org.apache.velocity.macro - added VM includeVideoEmbedding: source=org.apache.velocity.Template@5a021cb9
+12:52:33.988 [main] DEBUG org.apache.velocity.macro - added VM includeImageEmbedding: source=org.apache.velocity.Template@5a021cb9
+12:52:33.988 [main] DEBUG org.apache.velocity.macro - added VM includeImageReferenceEmbedding: source=org.apache.velocity.Template@5a021cb9
+12:52:33.988 [main] DEBUG org.apache.velocity.macro - added VM includeTextEmbedding: source=org.apache.velocity.Template@5a021cb9
+12:52:33.988 [main] DEBUG org.apache.velocity.macro - added VM includeUnknownEmbedding: source=org.apache.velocity.Template@5a021cb9
+12:52:33.988 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/embeddings.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.990 [main] DEBUG org.apache.velocity.macro - added VM includeHooks: source=org.apache.velocity.Template@b93aad
+12:52:33.991 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/hooks.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.992 [main] DEBUG org.apache.velocity.macro - added VM includeOutput: source=org.apache.velocity.Template@2e8ab815
+12:52:33.992 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/output.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.993 [main] DEBUG org.apache.velocity.macro - added VM includeMessage: source=org.apache.velocity.Template@41394595
+12:52:33.994 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.996 [main] DEBUG org.apache.velocity.macro - added VM includeSteps: source=org.apache.velocity.Template@5769e7ae
+12:52:33.996 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/steps.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.997 [main] DEBUG org.apache.velocity.macro - added VM includeStepName: source=org.apache.velocity.Template@287f94b1
+12:52:33.997 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/stepName.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:33.999 [main] DEBUG org.apache.velocity.macro - added VM includeTags: source=org.apache.velocity.Template@3676ac27
+12:52:33.999 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/macros/json/tags.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+12:52:34.001 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.002 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.003 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.004 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.006 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.007 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.008 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.008 [main] DEBUG org.apache.velocity.macro - VM #includeBrief: too few arguments to macro. Wanted 5 got 4
+12:52:34.012 [main] DEBUG org.apache.velocity.loader - ResourceManager: found /templates/footer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+</system-out>
+    <system-err>Jul 16, 2020 12:52:32 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File &apos;C:\Users\rames\eclipse-workspace\KarateAPI\target\surefire-reports\featurespackage.dataDriven.json&apos; contains 1 features
+Jul 16, 2020 12:52:32 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File &apos;C:\Users\rames\eclipse-workspace\KarateAPI\target\surefire-reports\featurespackage.demoTest.json&apos; contains 1 features
+Jul 16, 2020 12:52:32 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File &apos;C:\Users\rames\eclipse-workspace\KarateAPI\target\surefire-reports\featurespackage.demoTest2.json&apos; contains 1 features
+Jul 16, 2020 12:52:32 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File &apos;C:\Users\rames\eclipse-workspace\KarateAPI\target\surefire-reports\featurespackage.DemoTestPost1.json&apos; contains 1 features
+Jul 16, 2020 12:52:32 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File &apos;C:\Users\rames\eclipse-workspace\KarateAPI\target\surefire-reports\featurespackage.getCall.json&apos; contains 1 features
+Jul 16, 2020 12:52:32 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File &apos;C:\Users\rames\eclipse-workspace\KarateAPI\target\surefire-reports\featurespackage.readJava.json&apos; contains 1 features
+</system-err>
+  </testcase>
 </testsuite>

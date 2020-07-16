@@ -1,0 +1,53 @@
+<testsuite failures="2" name="featurespackage/demoTest.feature" skipped="0" tests="2" time="0.012835">
+  <testcase classname="featurespackage.demoTest" name="get user 2 details" time="0.009763">
+    <failure message="-unknown-:4 - could not find or read file: ../jsonFiles/result.json">* def expected = read('../jsonFiles/result.json') ......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: -unknown-:4 - could not find or read file: ../jsonFiles/result.json&#13;
+	at ✽.* def expected = read('../jsonFiles/result.json') (-unknown-:4)&#13;
+
+* def featureExt = call read('demoTest2.feature') ......................... skipped
+Given url "https://reqres.in/api/users/2" ................................. skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+Then print response ....................................................... skipped
+And match response == expected[0] ......................................... skipped
+And match response.data.id == 2 ........................................... skipped
+And match response.data.avatar != null .................................... skipped
+And print expected[0].data.last_name ...................................... skipped
+* def var2 = response.data.job_code ....................................... skipped
+And match var2 == null .................................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurespackage.demoTest" name="get user 3 details" time="0.003073">
+    <failure message="-unknown-:4 - could not find or read file: ../jsonFiles/result.json">* def expected = read('../jsonFiles/result.json') ......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: -unknown-:4 - could not find or read file: ../jsonFiles/result.json&#13;
+	at ✽.* def expected = read('../jsonFiles/result.json') (-unknown-:4)&#13;
+
+* def featureExt = call read('demoTest2.feature') ......................... skipped
+Given url "https://reqres.in/api/users/2" ................................. skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+Then print response ....................................................... skipped
+And match response == expected[0] ......................................... skipped
+And match response.data.id == 2 ........................................... skipped
+And match response.data.avatar != null .................................... skipped
+And print expected[0].data.last_name ...................................... skipped
+* def var2 = response.data.job_code ....................................... skipped
+And match var2 == null .................................................... skipped
+* def expected = read('../jsonFiles/result.json') ......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: -unknown-:4 - could not find or read file: ../jsonFiles/result.json&#13;
+	at ✽.* def expected = read('../jsonFiles/result.json') (-unknown-:4)&#13;
+
+* def featureExt = call read('demoTest2.feature') ......................... skipped
+Given url 'https://reqres.in/api/users/3' ................................. skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+Then print response ....................................................... skipped
+And match response == expected[1] ......................................... skipped
+Then print featureExt.response.data.first_name ............................ skipped</failure>
+  </testcase>
+</testsuite>

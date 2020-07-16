@@ -1,5 +1,5 @@
-15:54:28.596 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
-15:54:29.282 request:
+12:52:29.706 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:30.568 request:
 1 > POST https://reqres.in/api/users
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -9,28 +9,26 @@
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
 {"name": morpheus,"job": leader}
 
-15:54:32.476 response time in milliseconds: 3193.60
+12:52:31.781 response time in milliseconds: 1212.64
 1 < 201
 1 < Access-Control-Allow-Origin: *
 1 < CF-Cache-Status: DYNAMIC
-1 < CF-RAY: 5b32c6276b48dcda-SIN
+1 < CF-RAY: 5b39f8e57e70df57-BOM
 1 < Connection: keep-alive
 1 < Content-Length: 51
 1 < Content-Type: application/json; charset=utf-8
-1 < Date: Wed, 15 Jul 2020 10:24:29 GMT
-1 < Etag: W/"33-97d3HbYvh91PBuzLOLq28p7Yzgw"
+1 < Date: Thu, 16 Jul 2020 07:22:28 GMT
+1 < Etag: W/"33-LiudrSedCYizLlm1bDWgLk2vpnc"
 1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
 1 < Server: cloudflare
-1 < Set-Cookie: __cfduid=d94be8930c64acff5e1066da9fbc7887c1594808669; expires=Fri, 14-Aug-20 10:24:29 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 < Set-Cookie: __cfduid=de7ae42d1ee53c9b54315b5f7cab311961594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
 1 < Via: 1.1 vegur
 1 < X-Powered-By: Express
-1 < cf-request-id: 03f39a2ca10000dcda14122200000001
-{"id":"529","createdAt":"2020-07-15T10:24:29.724Z"}
+1 < cf-request-id: 03f819e36b0000df571c07a200000001
+{"id":"664","createdAt":"2020-07-16T07:22:28.302Z"}
 
-15:54:32.477 [print] {
-  "createdAt": "2020-07-15T10:24:29.724Z",
-  "id": "529"
+12:52:31.785 [print] {
+  "createdAt": "2020-07-16T07:22:28.302Z",
+  "id": "664"
 }
-
-8.jpg"},"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}
 

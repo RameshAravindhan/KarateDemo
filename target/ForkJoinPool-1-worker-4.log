@@ -1,60 +1,29 @@
-15:54:28.596 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
-15:54:29.280 request:
-1 > GET https://reqres.in/api/users/3
+12:52:29.704 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+12:52:30.568 request:
+1 > POST https://reqres.in/api/users
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
+1 > Content-Length: 36
+1 > Content-Type: text/plain; charset=UTF-8
 1 > Host: reqres.in
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+{"name": "morpheus","job": "leader"}
 
-15:54:31.846 response time in milliseconds: 2565.46
-1 < 200
+12:52:31.808 response time in milliseconds: 1239.28
+1 < 201
 1 < Access-Control-Allow-Origin: *
-1 < Age: 3653
-1 < CF-Cache-Status: HIT
-1 < CF-RAY: 5b32c6263f2dc377-SIN
-1 < Cache-Control: max-age=14400
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 5b39f8e58bc8e15a-BOM
 1 < Connection: keep-alive
+1 < Content-Length: 51
 1 < Content-Type: application/json; charset=utf-8
-1 < Date: Wed, 15 Jul 2020 10:24:29 GMT
-1 < Etag: W/"16e-/dQyOreIv6pEupp8RbP+u+utK/A"
+1 < Date: Thu, 16 Jul 2020 07:22:28 GMT
+1 < Etag: W/"33-S6J/u4SkDSp2rzhNMYunehhRT2o"
 1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
 1 < Server: cloudflare
-1 < Set-Cookie: __cfduid=d7a29d9cb39f350e3cb7a970a5a5d0a721594808669; expires=Fri, 14-Aug-20 10:24:29 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
-1 < Transfer-Encoding: chunked
-1 < Vary: Accept-Encoding
+1 < Set-Cookie: __cfduid=d997c637cf216c0223d43a09de696e2431594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
 1 < Via: 1.1 vegur
 1 < X-Powered-By: Express
-1 < cf-request-id: 03f39a2be70000c377441e6200000001
-{"data":{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"},"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}
+1 < cf-request-id: 03f819e3730000e15a481ea200000001
+{"id":"135","createdAt":"2020-07-16T07:22:28.361Z"}
 
-15:54:31.855 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
-15:54:31.862 request:
-1 > GET https://reqres.in/api/users/3
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: reqres.in
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
-
-15:54:35.551 response time in milliseconds: 3686.50
-1 < 200
-1 < Access-Control-Allow-Origin: *
-1 < Age: 3656
-1 < CF-Cache-Status: HIT
-1 < CF-RAY: 5b32c63d4d9201dd-SIN
-1 < Cache-Control: max-age=14400
-1 < Connection: keep-alive
-1 < Content-Type: application/json; charset=utf-8
-1 < Date: Wed, 15 Jul 2020 10:24:32 GMT
-1 < Etag: W/"16e-/dQyOreIv6pEupp8RbP+u+utK/A"
-1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-1 < Server: cloudflare
-1 < Set-Cookie: __cfduid=d98265547d642c092839201009bda59181594808672; expires=Fri, 14-Aug-20 10:24:32 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
-1 < Transfer-Encoding: chunked
-1 < Vary: Accept-Encoding
-1 < Via: 1.1 vegur
-1 < X-Powered-By: Express
-1 < cf-request-id: 03f39a3a4c000001dd0a249200000001
-{"data":{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"},"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}
-
-15:54:35.573 [print]  Return Value----- Hello
-15:54:35.580 [print] Second return value------ 

@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: com/feature/readJava.feature</title>
+<title>Cucumber Reports  - Feature: featurespackage/demoTest2.feature</title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>demo</td>
-      <td>15 Jul 2020, 15:54</td>
+      <td>16 Jul 2020, 12:52</td>
     </tr>
   </tbody>
 </table>
@@ -126,19 +126,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">com/feature/readJava.feature</td>
-          <td      class="passed"    >5</td>
+          <td class="tagname">featurespackage/demoTest2.feature</td>
+          <td      class="passed"    >3</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">5</td>
+          <td class="total">3</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="20260500">0.020</td>
+          <td class="duration" data-value="1787843900">1.787</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -173,12 +173,12 @@ $(document).ready(function() {
 
 <div class="brief passed">
   <span class="keyword indention">Feature</span>
-  <span class="name">com/feature/readJava.feature</span>
+  <span class="name">featurespackage/demoTest2.feature</span>
 
 
 </div>
 
-        <div class="description indention">Try reading Java functions</div>
+        <div class="description indention">Second feature file</div>
 
         <div class="elements inner-level">
 
@@ -189,14 +189,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.020</span>
+  <span class="lead-duration duration">1.787</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Reading Java functions</span>
+  <span class="name">get user 3 details</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -228,11 +228,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def firstvar = Java.type('com.feature.\JavaDemo')</span>
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url &quot;https://reqres.in/api/users/3&quot;</span>
 
-  <span class="lead-duration duration">0.007</span>
+  <span class="lead-duration duration">0.013</span>
 
 </div>
 
@@ -250,7 +250,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>15:54:32.114 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+        <pre>12:52:29.703 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
       </div>
     </div>
   </div>
@@ -265,65 +265,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def secondvar = new firstvar().demoFun(&quot;World&quot;);</span>
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
 
-  <span class="lead-duration duration">0.008</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def thirdvar = firstvar.demoSta(&quot;everybody&quot;);</span>
-
-  <span class="lead-duration duration">0.003</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">print secondvar</span>
-
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.774</span>
 
 </div>
 
@@ -341,7 +287,33 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>15:54:32.136 [print] Hello  World</pre>
+        <pre>12:52:30.567 request:
+1 &gt; GET https://reqres.in/api/users/3
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+
+12:52:31.500 response time in milliseconds: 930.77
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 1592
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 5b39f8e58ad1df5f-BOM
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 16 Jul 2020 07:22:28 GMT
+1 &lt; Etag: W/&quot;16e-/dQyOreIv6pEupp8RbP+u+utK/A&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d3db64a6f1334e0d2fff51cc2672ab6701594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 03f819e3700000df5fc49e2200000001
+{&quot;data&quot;:{&quot;id&quot;:3,&quot;email&quot;:&quot;emma.wong@reqres.in&quot;,&quot;first_name&quot;:&quot;Emma&quot;,&quot;last_name&quot;:&quot;Wong&quot;,&quot;avatar&quot;:&quot;https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg&quot;},&quot;ad&quot;:{&quot;company&quot;:&quot;StatusCode Weekly&quot;,&quot;url&quot;:&quot;http://statuscode.org/&quot;,&quot;text&quot;:&quot;A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.&quot;}}</pre>
       </div>
     </div>
   </div>
@@ -356,9 +328,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">print thirdvar</span>
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -372,16 +344,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>15:54:32.136 [print] Hi  everybody</pre>
-      </div>
-    </div>
-  </div>
 
 
 

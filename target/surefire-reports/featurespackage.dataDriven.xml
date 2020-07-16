@@ -1,5 +1,5 @@
-<testsuite failures="0" name="com/feature/dataDriven.feature" skipped="0" tests="1" time="3.858332">
-  <testcase classname="com.feature.dataDriven" name="Create User Details" time="3.858332">
+<testsuite failures="0" name="featurespackage/dataDriven.feature" skipped="0" tests="1" time="2.055676">
+  <testcase classname="featurespackage.dataDriven" name="Create User Details" time="2.055676">
     <system-out>Given url 'https://reqres.in/api/users' ................................... passed
 And request '{"name": morpheus,"job": leader}' ............................ passed
 When method POST .......................................................... passed
