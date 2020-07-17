@@ -1,1 +1,1 @@
-{"features":6,"ignored":0,"efficiency":0.4627444082840237,"failures":{"featurespackage.demoTest":"-unknown-:4 - could not find or read file: ..\/jsonFiles\/result.json\n-unknown-:4 - could not find or read file: ..\/jsonFiles\/result.json"},"totalTime":7820.3805,"threads":5,"scenarios":7,"failed":2,"passed":5,"version":"0.9.5","elapsedTime":3380.0}
+{"features":6,"ignored":0,"efficiency":0.5256438507396777,"failures":null,"totalTime":11903.205,"threads":5,"scenarios":7,"failed":0,"passed":7,"version":"0.9.5","elapsedTime":4529.0}

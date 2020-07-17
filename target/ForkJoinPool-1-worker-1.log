@@ -1,34 +1,73 @@
-12:52:29.706 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
-12:52:30.568 request:
-1 > POST https://reqres.in/api/users
+15:03:48.641 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+15:03:49.463 request:
+1 > GET https://reqres.in/api/users/3
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Length: 32
-1 > Content-Type: text/plain; charset=UTF-8
 1 > Host: reqres.in
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
-{"name": morpheus,"job": leader}
 
-12:52:31.781 response time in milliseconds: 1212.64
-1 < 201
+15:03:50.643 response time in milliseconds: 1172.83
+1 < 200
 1 < Access-Control-Allow-Origin: *
-1 < CF-Cache-Status: DYNAMIC
-1 < CF-RAY: 5b39f8e57e70df57-BOM
+1 < Age: 4072
+1 < CF-Cache-Status: HIT
+1 < CF-RAY: 5b42f6b53ed5018f-SIN
+1 < Cache-Control: max-age=14400
 1 < Connection: keep-alive
-1 < Content-Length: 51
 1 < Content-Type: application/json; charset=utf-8
-1 < Date: Thu, 16 Jul 2020 07:22:28 GMT
-1 < Etag: W/"33-LiudrSedCYizLlm1bDWgLk2vpnc"
+1 < Date: Fri, 17 Jul 2020 09:33:50 GMT
+1 < Etag: W/"16e-/dQyOreIv6pEupp8RbP+u+utK/A"
 1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
 1 < Server: cloudflare
-1 < Set-Cookie: __cfduid=de7ae42d1ee53c9b54315b5f7cab311961594884148; expires=Sat, 15-Aug-20 07:22:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 < Set-Cookie: __cfduid=d56124aede4f6a426e0b991cf0a8e8dfa1594978430; expires=Sun, 16-Aug-20 09:33:50 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding
 1 < Via: 1.1 vegur
 1 < X-Powered-By: Express
-1 < cf-request-id: 03f819e36b0000df571c07a200000001
-{"id":"664","createdAt":"2020-07-16T07:22:28.302Z"}
+1 < cf-request-id: 03fdb885410000018f93278200000001
+{"data":{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"},"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}
 
-12:52:31.785 [print] {
-  "createdAt": "2020-07-16T07:22:28.302Z",
-  "id": "664"
+15:03:50.685 request:
+1 > GET https://reqres.in/api/users/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: reqres.in
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+
+15:03:50.982 response time in milliseconds: 295.29
+1 < 200
+1 < Access-Control-Allow-Origin: *
+1 < Age: 1269
+1 < CF-Cache-Status: HIT
+1 < CF-RAY: 5b42f6b7ecfcdd77-SIN
+1 < Cache-Control: max-age=14400
+1 < Connection: keep-alive
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 17 Jul 2020 09:33:50 GMT
+1 < Etag: W/"173-1Z8bn0V7UjH6FK7NCaza1ccWXQk"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Server: cloudflare
+1 < Set-Cookie: __cfduid=daa3335ee14f02800b40f6633041acf971594978430; expires=Sun, 16-Aug-20 09:33:50 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Powered-By: Express
+1 < cf-request-id: 03fdb886ee0000dd77a2816200000001
+{"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"},"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}
+
+15:03:50.983 [print] {
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": {
+    "last_name": "Weaver",
+    "id": 2,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg",
+    "first_name": "Janet",
+    "email": "janet.weaver@reqres.in"
+  }
 }
 
+15:03:51.033 [print] Weaver

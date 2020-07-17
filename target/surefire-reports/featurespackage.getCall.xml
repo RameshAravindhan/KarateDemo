@@ -1,5 +1,5 @@
-<testsuite failures="0" name="featurespackage/getCall.feature" skipped="0" tests="1" time="1.856874">
-  <testcase classname="featurespackage.getCall" name="get user 3 details" time="1.856874">
+<testsuite failures="0" name="featurespackage/getCall.feature" skipped="0" tests="1" time="2.078636">
+  <testcase classname="featurespackage.getCall" name="get user 3 details" time="2.078636">
     <system-out>Given url 'https://reqres.in/api/users/3' ................................. passed
 When method GET ........................................................... passed
 Then status 200 ........................................................... passed

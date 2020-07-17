@@ -1,5 +1,5 @@
-<testsuite failures="0" name="featurespackage/readJava.feature" skipped="0" tests="1" time="0.028945">
-  <testcase classname="featurespackage.readJava" name="Reading Java functions" time="0.028945">
+<testsuite failures="0" name="featurespackage/readJava.feature" skipped="0" tests="1" time="0.023948">
+  <testcase classname="featurespackage.readJava" name="Reading Java functions" time="0.023948">
     <system-out>* def firstvar = Java.type('com.feature.\JavaDemo') ....................... passed
 * def secondvar = new firstvar().demoFun("World"); ........................ passed
 * def thirdvar = firstvar.demoSta("everybody"); ........................... passed

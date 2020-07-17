@@ -1,9 +1,9 @@
 Feature: User Details 
 
 Background:
- * def expected = read('../jsonFiles/result.json')
+ * def expected = read('../../../src/test/java/com/jsonFiles/result.json')
  * def featureExt = call read('demoTest2.feature')
- 
+ #/KarateAPI/src/test/java/com/jsonFiles/result.json
 
 Scenario: get user 2 details
 Given url "https://reqres.in/api/users/2"
